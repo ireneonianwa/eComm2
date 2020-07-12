@@ -18,7 +18,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages={
+		"com.tts.eCommerce.repository.OrderRepository"})
 
 @EnableAutoConfiguration(exclude = { //  
         DataSourceAutoConfiguration.class, //
